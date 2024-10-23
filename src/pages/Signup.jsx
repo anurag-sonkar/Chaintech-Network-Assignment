@@ -112,7 +112,7 @@ function Signup() {
                 <div className='input-field'>
                     <label htmlFor='name'>Name</label>
                     <div>
-                        <input type='text' id='name' value={formData.name} onChange={(e) => handleFormChange(e)} name='name' />
+                        <input type='text' id='name' value={formData.name} onChange={(e) => handleFormChange(e)} name='name' placeholder='Enter your name' />
                         {error.nameError && <div className='error'>{error.nameError}</div>}
                     </div>
                 </div>
@@ -120,7 +120,7 @@ function Signup() {
                 <div className='input-field'>
                     <label htmlFor='email'>Email</label>
                     <div>
-                        <input type='text' id='email' value={formData.email} onChange={(e) => handleFormChange(e)} name='email' />
+                        <input type='text' id='email' value={formData.email} onChange={(e) => handleFormChange(e)} name='email' placeholder='Enter your email' />
                         {error.emailError && <div className='error'>{error.emailError}</div>}
                     </div>
                 </div>
@@ -128,7 +128,7 @@ function Signup() {
                 <div className='input-field'>
                     <label htmlFor='password'>Password</label>
                     <div>
-                        <input type='password' id='password' value={formData.password} onChange={(e) => handleFormChange(e)} name='password' />
+                        <input type='password' id='password' value={formData.password} onChange={(e) => handleFormChange(e)} name='password' placeholder='Enter your password' />
                         {error.passwordError && <div className='error'>{error.passwordError}</div>}
                     </div>
                 </div>
@@ -151,7 +151,7 @@ function Signup() {
                 </div>
 
                 <button type='submit' className='btn' >Register Now</button>
-                <div className='navigate'><div>Already have an account ? </div><Link to='/login'>Login now</Link></div>
+                <div className='navigate'><div>Already have an account ? </div><Link to='/'>Login now</Link></div>
             </form>
         </div>
     )

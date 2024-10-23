@@ -1,5 +1,5 @@
-import React from 'react'
-import Profile from '../components/Profile'
+import React, { lazy } from 'react'
+const Profile = lazy(() => import("../components/Profile"));
 
 function Dashboard() {
   return (
@@ -10,6 +10,7 @@ function Dashboard() {
         <div className='profile-container'>
             <Profile />
         </div>
+        
     </div>
   )
 }

@@ -254,3 +254,28 @@ form h1{
   font-size: larger;
   font-weight: 700;
 }
+
+/* modal */
+.modal{
+  position: absolute;
+    /* Absolutely positioned */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Offset the element's position by 50% of its width and height */
+  background-color: whitesmoke;
+  min-height: 40vh;
+  min-width: 40vw;
+  padding: 1rem 1.6rem;
+  border-radius: 6px;
+}
+.update-heading{
+  text-align: center;
+}
+.edit-form{
+  display: grid;
+  gap: 1.4rem;
+  padding: 1rem;
+}

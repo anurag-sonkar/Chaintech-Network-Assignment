@@ -4,11 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 function Header() {
     const navigate = useNavigate()
-    const {user} = useUserAuth()
+    const {user , setUser} = useUserAuth()
     console.log(user)
 
     const handleLogout = ()=>{
         localStorage.removeItem('user')
+        setUser(null)
         navigate('/')
     }
     return (

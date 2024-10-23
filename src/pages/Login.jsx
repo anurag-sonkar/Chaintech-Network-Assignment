@@ -93,7 +93,7 @@ function Login() {
                 <div className='input-field'>
                     <label htmlFor='email'>Email</label>
                     <div>
-                        <input type='text' id='email' value={formData.email} onChange={(e) => handleFormChange(e)} name='email' />
+                        <input type='text' id='email' value={formData.email} onChange={(e) => handleFormChange(e)} name='email' placeholder='Enter your email'/>
                         {error.emailError && <div className='error'>{error.emailError}</div>}
                     </div>
                 </div>
@@ -101,7 +101,7 @@ function Login() {
                 <div className='input-field'>
                     <label htmlFor='password'>Password</label>
                     <div>
-                        <input type='password' id='password' value={formData.password} onChange={(e) => handleFormChange(e)} name='password' />
+                        <input type='password' id='password' value={formData.password} onChange={(e) => handleFormChange(e)} name='password' placeholder='Enter your password' />
                         {error.passwordError && <div className='error'>{error.passwordError}</div>}
                     </div>
                 </div>

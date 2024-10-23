@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Header from './components/Header';
-import { useUserAuth } from './context/UserContext';
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));

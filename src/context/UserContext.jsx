@@ -1,33 +1,39 @@
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// creating user context - to acccess data of those comonents which were wrap inside context provider f userContext
-const UserContext = createContext()
+// Creating user context to access data in child components
+const UserContext = createContext();
 
-// custom hook to access user Context data-field more easily
-export const useUserAuth = () => useContext(UserContext)
+// Custom hook to access UserContext data more easily
+export const useUserAuth = () => useContext(UserContext);
 
-// userContext provider which provides the data to its childs components
+// UserContextProvider that provides user data to its child components
 const UserContextProvider = (props) => {
-    const navigate = useNavigate()
-    const user = JSON.parse(localStorage.getItem('user')) 
+    const navigate = useNavigate();
+    const [user, setUser] = useState(null);
 
-    // on render check for user and do navigation if user exists
-    useEffect(
-        () => {
-            if (user) {
-                // console.log(user)
-                navigate('/dashboard')
+    // Function to fetch user from localStorage
+    const fetchUser = () => {
+        const response = JSON.parse(localStorage.getItem('user'));
+        if (response) {
+            setUser(response);
+            // Navigate only if the user is not already on the dashboard
+            if (window.location.pathname !== '/dashboard') {
+                navigate('/dashboard');
             }
-        }, []   /* side-effect check user exists in localStorage , and show page accordingly */
-    )
+        }
+    };
+
+    // Check for user and navigate if needed when the component mounts
+    useEffect(() => {
+        fetchUser();
+    }, []);
 
     return (
-        <UserContext.Provider value={{user}}>
+        <UserContext.Provider value={{ user, setUser, fetchUser }}>
             {props.children}
         </UserContext.Provider>
-    )
+    );
+};
 
-}
-
-export default UserContextProvider
+export default UserContextProvider;
