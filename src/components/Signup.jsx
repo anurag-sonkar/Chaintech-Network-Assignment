@@ -114,7 +114,7 @@ function Signup() {
             // Notify user and redirect to login page (or another page)
             alert("Registered successfully!");
             setFormData({ name: "", email: "", password: "", gender: "" }); // Clear form fields
-            navigate('/'); // Navigate to the home or login page
+            navigate('/dashboard'); // Navigate to the home or login page
         }
     };
 

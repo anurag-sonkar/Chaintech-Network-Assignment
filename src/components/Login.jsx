@@ -67,20 +67,17 @@ function Login() {
 
         // Proceed only if there are no errors
         if (!hasError) {
-            const data = {
-                ...formData,
-                id: Date.now(),  // Generate unique ID for the user
-            };
 
             // Retrieve any existing users from localStorage or initialize as an empty array
             const storedData = JSON.parse(localStorage.getItem('user')) || [];
-
+            
             // find user using its filled form info
             const user = storedData.find(user => user.email === formData.email)
+            console.log(user)
 
             // Notifyy user and redirect to login page (or another page)
             if (user) { // Navigate to the home or login page
-                navigate('/')
+                navigate('/dashboard')
             } else{
                 alert(`${formData.email} is not found`)
                 return
