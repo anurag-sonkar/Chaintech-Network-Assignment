@@ -29,7 +29,7 @@ Local Storage: For persistent data storage
 CSS: For styling
 
 #Installation
-1.Clone the repository: git clone https://github.com/your-username/react-user-management-app.git
+1.Clone the repository: git clone https://github.com/anurag-sonkar/Chaintech-Network-Assignment.git
 2.Navigate into the project directory: cd react-user-management-app
 3.Install dependencies: npm install
 4.Start the development server: npm start / npm run dev
