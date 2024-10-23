@@ -14,5 +14,97 @@ body{
   text-align: center;
   box-shadow: 2px 2px 2px 0px #ccc;
   padding: 0.5rem 0;
+  background-color: #111;
+  color: whitesmoke;
 }
 
+
+.form-container{
+  width: 100%;
+  height: calc(100vh - 3.8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  /* border: 1px solid #000; */
+  box-shadow: 2px 2px 5px 0px #717171;
+  padding: 1.2rem 1.6rem;
+  display: grid;
+  gap: 0.8rem;
+  border-radius: 4px;
+}
+form h1{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.input-field{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.input-field label{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.input-field input{
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid rgb(183, 230, 248);
+  border-radius: 4px;
+}
+
+.input-field-radio{
+  display: flex;
+  align-items: center;  
+  gap: 1.2rem ;
+  justify-content: start;
+}
+
+.input-field-radio label{
+  font-size: 1rem;
+}
+
+.btn{
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  border-radius: 4px;
+  background-color: rgb(255, 189, 6);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 0px #ccc;
+  transition: all 0.2s ease-in;
+  margin: 1.6rem 0 0 ;
+}
+
+.btn:hover{
+  background-color: rgb(255, 147, 6);
+
+}
+.navigate{
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.error{
+  color: crimson;
+  font-size: small;
+  font-weight: 500;
+}
+
+.error::after{
+  content: "*";
+}
