@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-const Login = lazy(() => import("./components/Login"));
-const Signup = lazy(() => import("./components/Signup"));
-const Dashboard = lazy(() => import("./components/Dashboard"));
+const Login = lazy(() => import("./pages/Login"));
+const Signup = lazy(() => import("./pages/Signup"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 function App() {
   return (
