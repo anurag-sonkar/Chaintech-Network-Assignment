@@ -9,14 +9,57 @@ body{
   font-optical-sizing: auto;
 }
 
-
-.heading{
-  text-align: center;
-  box-shadow: 2px 2px 2px 0px #ccc;
-  padding: 0.5rem 0;
+/* Styling the header */
+.header {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: space-between;
+  /* Space between the title and buttons */
+  align-items: center;
+  /* Center vertically */
   background-color: #111;
-  color: whitesmoke;
+  /* Light grey background */
+  color: white;
+  padding: 0.5rem 1.2rem;
 }
+
+/* Styling for the heading */
+.header-title {
+  margin: 0;
+  /* Remove default margin */
+  text-align: center;
+  /* Center the text */
+  flex-grow: 1;
+  /* Allow the heading to take available space */
+}
+
+/* Button container */
+.header-buttons {
+  display: flex;
+  /* Flexbox for the button layout */
+  gap: 10px;
+  align-items: center;
+  /* Space between buttons */
+}
+
+.header-buttons button{
+  outline: none;
+  border: none;
+  background-color: rgb(255, 189, 6);
+  font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+}
+
+.header-buttons button:hover{
+  background-color: rgb(255, 147, 6);
+}
+
+
 
 
 .form-container{

@@ -1,5 +1,7 @@
-import React, { lazy, Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { lazy, Suspense, useEffect } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
+import Header from './components/Header';
+import { useUserAuth } from './context/UserContext';
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -7,7 +9,7 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 function App() {
   return (
     <div className="App">
-      <h1 className='heading'>User Management App</h1>
+      <Header />
       <Suspense fallback={<div>Loading...</div>}> {/* fallback when components are loading */}
         <Routes> {/* in order to write muktiple Route need to wrap inside Routes wrapper */}
           <Route path='/' Component={Login} /> {/* display specific component on that path*/}

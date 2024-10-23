@@ -93,23 +93,9 @@ function Signup() {
                 id: Date.now(),  // Generate unique ID for the user
             };
 
-            // Retrieve any existing users from localStorage or initialize as an empty array
-            const storedData = JSON.parse(localStorage.getItem('user')) || [];
-
-
-            // Check if the email already exists (for uniqueness)
-            const isEmailExist = storedData.some(user => user.email === formData.email);
-
-            if (isEmailExist) {
-                alert("Email already registered! Please use a different email.");
-                return;
-            }
-
-            // Add new user to the list of stored users
-            storedData.push(data);
 
             // Update localStorage with the new user data
-            localStorage.setItem("user", JSON.stringify(storedData));
+            localStorage.setItem("user", JSON.stringify(formData));
 
             // Notify user and redirect to login page (or another page)
             alert("Registered successfully!");

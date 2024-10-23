@@ -72,7 +72,7 @@ function Login() {
             const storedData = JSON.parse(localStorage.getItem('user')) || [];
             
             // find user using its filled form info
-            const user = storedData.find(user => user.email === formData.email)
+            const user = storedData.email === formData.email
             console.log(user)
 
             // Notifyy user and redirect to login page (or another page)
