@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <h1 className='heading'>User Management App</h1>
       <Suspense fallback={<div>Loading...</div>}> {/* fallback when components are loading */}
-        <Routes> {/* in order to write muktiple Route */}
-          <Route path='/' Component={Dashboard} /> {/* display specific component on that path */}
-          <Route path='/login' Component={Login} />
+        <Routes> {/* in order to write muktiple Route need to wrap inside Routes wrapper */}
+          <Route path='/' Component={Login} /> {/* display specific component on that path*/}
+          <Route path='/dashboard' Component={Dashboard} />
           <Route path='/signup' Component={Signup} />
         </Routes>
       </Suspense>
