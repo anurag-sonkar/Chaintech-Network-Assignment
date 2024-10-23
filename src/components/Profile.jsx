@@ -14,12 +14,12 @@ function Profile() {
 
     useEffect(
         ()=>{
-            fetchUser()
+            fetchUser() // Check for user and navigate if needed when the component mounts
         },[]
     )
 
     const [show , setShow] = useState(false) // modal open/close state
-    
+
   return (
     <div className='container'>
         <span className='edit' onClick={()=>setShow(true)}>✏️</span>
